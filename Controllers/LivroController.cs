@@ -18,7 +18,13 @@ namespace Biblioteca.Controllers
 
             if(l.Id == 0)
             {
-                livroService.Inserir(l);
+                if(l.Autor == null || l.Titulo == null || l.Ano == 0)
+                {
+                    ViewData["Error"] = "Todos os campos são obrigatórios";
+                    return View(); 
+                }
+
+                livroService.Inserir(l);                
             }
             else
             {

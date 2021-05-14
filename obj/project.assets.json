@@ -850,11 +850,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Uer\\Desktop\\tecnico\\UC07\\Netcore3.1 - Cópia (3)\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\Uer\\Desktop\\tecnico\\UC07\\atividades\\Atividade 2\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "C:\\Users\\Uer\\Desktop\\tecnico\\UC07\\Netcore3.1 - Cópia (3)\\Biblioteca\\Biblioteca.csproj",
+      "projectPath": "C:\\Users\\Uer\\Desktop\\tecnico\\UC07\\atividades\\Atividade 2\\Biblioteca\\Biblioteca.csproj",
       "packagesPath": "C:\\Users\\Uer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Uer\\Desktop\\tecnico\\UC07\\Netcore3.1 - Cópia (3)\\Biblioteca\\obj\\",
+      "outputPath": "C:\\Users\\Uer\\Desktop\\tecnico\\UC07\\atividades\\Atividade 2\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Uer\\AppData\\Roaming\\NuGet\\NuGet.Config"

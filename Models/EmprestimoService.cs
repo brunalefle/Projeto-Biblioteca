@@ -58,6 +58,8 @@ namespace Biblioteca.Models
                     query = bc.Emprestimos;
                 }
                 
+                
+
                 //ordenação padrão
                 return query.Include(e => e.Livro).OrderByDescending(e => e.DataDevolucao).ToList();
             }

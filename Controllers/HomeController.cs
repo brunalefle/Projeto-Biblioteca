@@ -31,18 +31,28 @@ namespace Biblioteca.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string login, string senha)
+        public IActionResult Login(Usuario u)
         {
-            if(login != "admin" || senha != "123")
+            UsuarioService service = new UsuarioService();
+            Usuario usuarioEncontrado = service.ObterDados(u.Login, u.Senha);
+
+            if(usuarioEncontrado == null)
             {
-                ViewData["Erro"] = "Senha inválida";
+                ViewData["Erro"] = "Login ou senha incorreta";
                 return View();
             }
             else
             {
-                HttpContext.Session.SetString("user", "admin");
+                HttpContext.Session.SetString("user", usuarioEncontrado.Login);
                 return RedirectToAction("Index");
             }
+
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return View("Login");
         }
 
         public IActionResult Privacy()

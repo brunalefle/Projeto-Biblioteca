@@ -1,0 +1,14 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Confirmação";
+}
+
+<h3>Exclusão de registro</h3>
+<p>Esta ação excluirá o usuário <strong>@Model.Login</strong> e a operação não poderá ser desfeita.</p>
+<p>Deseja mesmo excluir?</p>
+
+<form asp-action="Exclusao" method="POST">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-outline-dark mr-2" type="submit" name="decisao" value="n">Não</button>
+    <button class="btn btn-danger" type="submit" name="decisao" value="s">Sim</button>
+</form>

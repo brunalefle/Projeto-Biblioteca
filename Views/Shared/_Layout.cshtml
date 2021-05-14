@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -32,6 +34,23 @@
                                 <a class="dropdown-item" href="/Emprestimo/Cadastro">Cadastro</a>
                             </div>
                         </li>
+                        @if (Context.Session.GetString("user") == "admin")
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Usuários</a>
+                                <div class="dropdown-menu" aria-labelledby="menuUsuarios">
+                                    <a class="dropdown-item" href="/Usuario/Listagem">Listagem</a>
+                                    <a class="dropdown-item" href="/Usuario/Cadastro">Cadastro</a>
+                                </div>
+                            </li>
+                        }
+
+                        @if (Context.Session.GetString("user") != null)
+                        {
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Home" asp-action="Logout" class="nav-link text-light">Logout</a>
+                        </li>
+                        }
                     </ul>
                 </div>
             </div>
